@@ -3,8 +3,21 @@
     padding: 0;
     margin: 0;
 }
+
+.container{
+    background-image:url(../img/ring2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    
+    height: 100vh;
+    
+    
+}
+
 .title{
     text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .block{
@@ -12,10 +25,16 @@
     justify-content: center;
     flex-direction: row;
     align-items: center;
+    font-size: 70px;
     
 }
 
 .block img{
-    height: 250px;
-    width: 300px;
+    height: 400px;
+    width: 600px;
+    object-fit:contain;
+}
+
+.next,.prev:hover{
+    cursor:pointer;
 }
