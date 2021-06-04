@@ -33,11 +33,13 @@ const root = new Vue({
         pointSelector(index) {
           console.log(this.counter);
           console.log(index);
+          this.counter = index;
           if(this.counter === index){
               return this.counter;
+
          }else{
              this.counter= index;
-         }
+         } 
           
           
          }
