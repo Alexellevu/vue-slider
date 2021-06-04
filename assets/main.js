@@ -31,19 +31,29 @@ const root = new Vue({
             }
         },
         pointSelector(index) {
-          console.log(this.counter);
-          console.log(index);
           this.counter = index;
-          if(this.counter === index){
+            if(this.counter === index){
               return this.counter;
 
-         }else{
-             this.counter= index;
-         } 
-          
-          
-         }
+                 }else{
+                    this.counter= index;
+                } 
+        }
 
 
+    },
+
+    mounted(){
+        document.addEventListener('keyup', (e) => {
+            console.log(e.key);
+            if(e.key === 'ArrowLeft'){
+                this.prev();
+            }else if(e.key === 'ArrowRight'){
+                this.next();
+            }
+        }),
+
+        setInterval(this.next, 5000 );
+      
     }
 })
