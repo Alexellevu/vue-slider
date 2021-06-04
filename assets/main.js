@@ -2,11 +2,14 @@ const root = new Vue({
     el:'#root',
     data:{
         counter:0,
-        images:['https://euro.venum.com//media/wysiwyg/loma/desk/VISUEL_SLIDER_03_02.jpg',//loma
+    
+        images:['https://www.boxeringweb.net/images/j2xml/f7a7406ca89d4c6be13536e37f397aa7.jpg',//loma
                 'https://boxe-mania.com/wp-content/uploads/2019/08/Rocky-Marciano.jpg',
                 'https://www.fattimarziali.it/wp-content/uploads/2020/07/roy-jones-jr.jpg',
+                'https://sportpowermind.it/wp-content/uploads/2016/06/tumblr_lvte6l2lAp1qbsg6oo1_1280.jpg',
                 'https://i.pinimg.com/originals/9c/d2/35/9cd235803feb4a951d4a8c5d45cbd7da.jpg',
-                'https://i.pinimg.com/originals/c4/41/5a/c4415abc3de2142dcb58298bb1b8fc76.jpg'//Paquiao
+                'https://i.pinimg.com/originals/c4/41/5a/c4415abc3de2142dcb58298bb1b8fc76.jpg',//Paquiao
+                'https://www.sportmagazine.it/wp-content/uploads/2021/01/canelo-alvarez-storia.png'//Canelo
             ]
     },
 
@@ -20,12 +23,24 @@ const root = new Vue({
         },
 
         next(){
+            
             if(this.counter === this.images.length-1){
                 return this.counter = 0;
             }else{
                 return this.counter+=1;
             }
-        }
+        },
+        pointSelector(index) {
+          console.log(this.counter);
+          console.log(index);
+          if(this.counter === index){
+              return this.counter;
+         }else{
+             this.counter= index;
+         }
+          
+          
+         }
 
 
     }
